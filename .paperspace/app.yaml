@@ -1,0 +1,13 @@
+image: paperspace/stable-diffusion-webui-deployment:v1.1-model-included
+port: 7860
+command:
+  - python
+  - launch.py
+  - '--autolaunch'
+  - '--listen'
+  - '--enable-insecure-extension-access'
+  - '--port'
+  - '7860'
+resources:
+  replicas: 1
+  instanceType: A4000
